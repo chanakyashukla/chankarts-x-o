@@ -2,6 +2,8 @@
 
 `ChankArts X & O` is a polished offline Tic Tac Toe desktop game for Windows, built with Python and Tkinter. It is designed to be lightweight, easy to run, and friendly to a normal Windows setup, including a Windows 11 VM running inside Parallels Desktop on macOS.
 
+This is a fun little `ChankArts` game made for Windows PC players who want something simple, clean, and instantly playable without needing a browser, internet connection, or a heavy install process.
+
 ## Overview
 
 This project is a clean two-player local `X` and `O` game with a dark modern interface, live score tracking, clear turn messaging, and proper end-game handling.
@@ -12,6 +14,16 @@ The app focuses on:
 - no third-party dependencies
 - offline play
 - a better-than-default Tkinter presentation
+
+## From ChankArts
+
+`ChankArts X & O` is meant to feel like a small creative desktop release rather than just a coding exercise. The idea behind it is simple:
+
+- make a classic game feel neat and presentable on Windows
+- keep the experience fast and lightweight
+- make something easy to share, open, and enjoy on a PC
+
+It is a compact project, but it still tries to carry a little personality in the visuals, the naming, and the overall presentation.
 
 ## Features
 
@@ -115,6 +127,17 @@ The interface uses a dark theme with:
 
 The goal was to keep the app feeling cleaner and more intentional than stock Tkinter defaults.
 
+## Why This Project
+
+This game was built as a small Windows-friendly `ChankArts` release that shows how even a simple classic game can be packaged with a bit more care. Instead of leaving it as a plain classroom-style Tic Tac Toe program, the project adds:
+
+- a stronger visual identity
+- a proper desktop window feel
+- score tracking across rounds
+- quick launch behavior for Windows users
+
+The result is still simple, but it feels more like a real desktop mini-game.
+
 ## Testing
 
 The game logic was checked for:
@@ -162,3 +185,4 @@ This usually reveals whether Python is missing or installed in a different locat
 - The app uses only the Python standard library.
 - No `requirements.txt` is needed.
 - The project is a good starter example for small Windows desktop games built without heavy frameworks.
+- It is also a small fun game release from `ChankArts`, made with Windows PC playability in mind.
