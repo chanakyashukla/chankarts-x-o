@@ -1,53 +1,164 @@
 # ChankArts X & O
 
-`ChankArts X & O` is a Windows-friendly Tic Tac Toe desktop game built with Python and Tkinter. It runs offline, uses no third-party dependencies, and is a good fit for a Windows VM such as Parallels Desktop on macOS.
+`ChankArts X & O` is a polished offline Tic Tac Toe desktop game for Windows, built with Python and Tkinter. It is designed to be lightweight, easy to run, and friendly to a normal Windows setup, including a Windows 11 VM running inside Parallels Desktop on macOS.
+
+## Overview
+
+This project is a clean two-player local `X` and `O` game with a dark modern interface, live score tracking, clear turn messaging, and proper end-game handling.
+
+The app focuses on:
+
+- simple setup
+- no third-party dependencies
+- offline play
+- a better-than-default Tkinter presentation
 
 ## Features
 
-- 3x3 local two-player Tic Tac Toe
-- X always starts first
-- Turn status messaging
-- Win detection for rows, columns, and diagonals
-- Draw detection
-- Winning cell highlight
-- Scoreboard for X wins, O wins, and draws
-- `New Game` and `Reset Score` controls
-- Dark modern UI with hover feedback
+- 3x3 Tic Tac Toe board
+- local two-player mode
+- `X` always starts first
+- live status text for turns, wins, and draws
+- win detection for rows, columns, and diagonals
+- draw detection when the board fills with no winner
+- winning line highlight
+- move lock after game over
+- `New Game` button for resetting the board
+- `Reset Score` button for clearing the scoreboard
+- scoreboard for:
+  - `X Wins`
+  - `O Wins`
+  - `Draws`
+- dark theme with hover feedback on empty cells
+- centered desktop window layout
+
+## Tech Stack
+
+- Python 3
+- Tkinter from the Python standard library
+
+No external packages are required.
 
 ## Requirements
 
-- Windows with Python 3 installed
+- Windows 10 or Windows 11
+- Python 3 installed
 - Tkinter available in the Python installation
 
-Most standard Windows Python installers include Tkinter by default.
+Most standard Python installers for Windows include Tkinter by default.
 
-## Run
+## Project Files
 
-From the project folder, run:
+- `main.py`  
+  The game itself, including UI and game-state logic.
+
+- `play-game.bat`  
+  A convenience launcher for Windows.
+
+- `README.md`  
+  Project documentation and usage notes.
+
+## How To Run
+
+### Option 1: Run with Python
+
+From the project folder:
 
 ```powershell
 python main.py
 ```
 
-If `python` is not on your PATH, use the full Python path or the Python Launcher:
+If `python` is not available on your PATH, try:
 
 ```powershell
 py main.py
 ```
 
-You can also launch the game directly with:
+### Option 2: Run with the Windows launcher
+
+Double-click:
+
+```powershell
+play-game.bat
+```
+
+Or from PowerShell:
 
 ```powershell
 .\play-game.bat
 ```
 
-## Files
+## How To Play
 
-- `main.py`
-- `README.md`
-- `play-game.bat`
+1. Player `X` starts first.
+2. Players take turns placing `X` and `O`.
+3. The first player to complete a row, column, or diagonal wins.
+4. If all cells are filled and nobody wins, the match is a draw.
+5. Use `New Game` to start the next round while keeping the scores.
+6. Use `Reset Score` to clear the board and all scoreboard values.
+
+## Controls
+
+- Left click an empty square to place your mark
+- `New Game` resets only the current round
+- `Reset Score` resets both the round and the scoreboard
+
+## Visual Design Notes
+
+The interface uses a dark theme with:
+
+- bold red styling for `X`
+- bright blue styling for `O`
+- highlighted winner cells
+- hover feedback on empty board squares
+- centered layout sized for a normal desktop window
+
+The goal was to keep the app feeling cleaner and more intentional than stock Tkinter defaults.
+
+## Testing
+
+The game logic was checked for:
+
+- horizontal win detection
+- vertical win detection
+- diagonal win detection
+- draw detection
+- score updates
+- board reset behavior
+- score reset behavior
+- prevention of extra moves after game over
+
+## Offline Use
+
+This project runs fully offline. It does not use:
+
+- web APIs
+- paid services
+- cloud services
+- external game engines
+
+## Troubleshooting
+
+### `python` is not recognized
+
+Install Python 3 for Windows and enable the option to add Python to `PATH` during installation.
+
+### Tkinter does not open
+
+Use a normal Windows Python installation from `python.org`. Standard installers usually include the required Tkinter components.
+
+### Double-clicking the launcher does nothing
+
+Open PowerShell in the project folder and run:
+
+```powershell
+python main.py
+```
+
+This usually reveals whether Python is missing or installed in a different location.
 
 ## Notes
 
-- The game is fully offline.
-- No `requirements.txt` is needed because the app uses only the Python standard library.
+- The app uses only the Python standard library.
+- No `requirements.txt` is needed.
+- The project is a good starter example for small Windows desktop games built without heavy frameworks.
